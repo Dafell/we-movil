@@ -1,56 +1,178 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <% include ../partials/header.ejs %>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+  <title>MobilWe-Search</title>
+
+  <!-- css -->
+  <link href="css/base.css" rel="stylesheet">
+  <link href="css/project.css" rel="stylesheet">
+  
+  <!-- favicon -->
+  <!-- ... -->
 </head>
-
-<body>
-
-  <% include ../partials/nav.ejs %>
-
-<div class="jumbotron text-center">
-  <div class="container">
-    <a href="/" class="lang-logo">
-      <img src="/lang-logo.png">
-    </a>
-    <h1>Getting Started with Node on Heroku</h1>
-    <p>This is a sample Node application deployed to Heroku. It's a reasonably simple app - but a good foundation for understanding how to get the most out of the Heroku platform.</p>
-    <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-nodejs"><span class="glyphicon glyphicon-flash"></span> Getting Started with Node</a>
-    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/node-js-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
-  </div>
-</div>
-<div class="container">
-  <div class="alert alert-info text-center" role="alert">
-    To deploy your own copy, and learn the fundamentals of the Heroku platform, head over to the <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs" class="alert-link">Getting Started with Node on Heroku</a> tutorial.
-  </div>
-  <hr>
-  <div class="row">
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-info-sign"></span> Danielll</h3>
-      <ul>
-        <li>This app was deployed to Heroku, either using Git or by using <a href="https://github.com/heroku/node-js-getting-started">Heroku Button</a> on the repository.</li>
-
-        <li>When Heroku received the source code, it grabbed all the dependencies in the <a href="https://github.com/heroku/node-js-getting-started/blob/master/package.json">package.json</a>.</li>
-        <li>The platform then spins up a dyno, a lightweight container that provides an isolated environment in which the slug can be mounted and executed.</li>
-        <li>You can scale your app, manage it, and deploy over <a href="https://addons.heroku.com/">150 add-on services</a>, from the Dashboard or CLI.</li>
-        <li>Check out the <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started</a> guide to learn more!</li>
-      </ul>
+<body class="page-red">
+  <header class="header header-transparent header-waterfall ui-header">
+    <ul class="nav nav-list pull-left">
+      <li>
+        <a data-toggle="menu" href="#ui_menu">
+          <span class="icon icon-lg">menu</span>
+        </a>
+      </li>
+    </ul>
+    <a class="header-logo margin-left-no" href="/">We-Search</a>
+    <ul class="nav nav-list pull-right">
+      <li class="dropdown margin-right">
+        <a class="dropdown-toggle padding-left-no padding-right-no" data-toggle="dropdown">
+          <span class="access-hide">John Smith</span>
+          <span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="../images/users/avatar-001.jpg"></span>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-right">
+          <li>
+            <a class="padding-right-lg waves-attach" href="javascript:void(0)"><span class="icon icon-lg margin-right">account_box</span>Profile Settings</a>
+          </li>
+          <li>
+            <a class="padding-right-lg waves-attach" href="javascript:void(0)"><span class="icon icon-lg margin-right">add_to_photos</span>Upload Photo</a>
+          </li>
+          <li>
+            <a class="padding-right-lg waves-attach" href="page-login.html"><span class="icon icon-lg margin-right">exit_to_app</span>Logout</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </header>
+  <nav aria-hidden="true" class="menu" id="ui_menu" tabindex="-1">
+    <div class="menu-scroll">
+      <div class="menu-content">
+        <a class="menu-logo" href="/">We-Search</a>
+        <ul class="nav">
+          <li>
+            <a class="collaosed waves-attach" data-toggle="collapse" href="#ui_menu_components">Calle</a>
+          </li>
+          <li>
+            <a class="collapsed waves-attach" data-toggle="collapse" href="#ui_menu_extras">Entretenimiento</a>
+          </li>
+          <li>
+            <a class="collapsed waves-attach" data-toggle="collapse" href="#ui_menu_javascript">Ocio</a>
+          </li>
+          <li>
+            <a class="collapsed waves-attach" data-toggle="collapse" href="#ui_menu_samples">Cultura</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-link"></span> Helpful Links</h3>
-      <ul>
-        <li><a href="https://www.heroku.com/home">Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/">Heroku Dev Center</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started with Node on Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/deploying-nodejs">Deploying Node Apps on Heroku</a></li>
-      </ul>
+  </nav>
+  <main class="content">
+    <div class="content-header ui-content-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-lg-push-3 col-sm-10 col-sm-push-1">
+            <h1 class="content-heading"><img class="Wlogo"src="images/logos/We-Search.png"></h1> 
+          </div>
+        </div>
+      </div>
     </div>
-  </div> <!-- row -->
-   <div class="alert alert-info text-center" role="alert">
-    Please do work through the Getting Started guide, even if you do know how to build such an application.  The guide covers the basics of working with Heroku, and will familiarize you with all the concepts you need in order to build and deploy your own apps.
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-lg-push-3 col-sm-10 col-sm-push-1">
+          <section class="content-inner margin-top-no">
+          
+            <nav class="tab-nav tab-nav-orange ui-tab">
+              <ul class="nav nav-list">
+                <li class="active">
+                  <a class="waves-attach waves-light" data-toggle="tab" href="#suggested"><span class="text-white">SUGERIDOS</span></a>
+                </li>
+                <li>
+                  <a class="waves-attach waves-light" data-toggle="tab" href="#categories"><span class="text-white">CATEGORIAS</span></a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="ui-card-wrap">
+          <div class="row">
+            <div class="col-md-4 col-sm-6">
+              <div class="card card-green">
+                <div class="card-main">
+                  <div class="card-inner">
+                    <p class="card-heading">Establecimiento 1</p>
+                    <p>
+                      Lorem ipsum dolor sit amet.<br>
+                      Consectetur adipiscing elit.
+                    </p>
+                  </div>
+                  <div class="card-action">
+                    <div class="card-action-btn pull-left">
+                      <a class="btn btn-flat waves-attach" href="javascript:void(0)"><span class="icon">check</span>&nbsp;Button</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card card-orange">
+                <div class="card-main">
+                  <div class="card-inner">
+                    <p class="card-heading">Establecimiento 2</p>
+                    <p>
+                      Lorem ipsum dolor sit amet.<br>
+                      Consectetur adipiscing elit.
+                    </p>
+                  </div>
+                  <div class="card-action">
+                    <div class="card-action-btn pull-left">
+                      <a class="btn btn-flat waves-attach" href="javascript:void(0)"><span class="icon">check</span>&nbsp;Button</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card card-red">
+                <div class="card-main">
+                  <div class="card-inner">
+                    <p class="card-heading">Establecimiento 3</p>
+                    <p>
+                      Lorem ipsum dolor sit amet.<br>
+                      Consectetur adipiscing elit.
+                    </p>
+                  </div>
+                  <div class="card-action">
+                    <div class="card-action-btn pull-left">
+                      <a class="btn btn-flat waves-attach waves-light" href="javascript:void(0)"><span class="icon">check</span>&nbsp;Button</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="ui-footer">
+    <div class="container">
+      <strong>&copy; 2016 <a href="">We-nnova</a> - Todos los derechos reservados</strong>
+    </div>
+  </footer>
+  <div class="fbtn-container">
+    <div class="fbtn-inner">
+      <a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light" data-toggle="dropdown"><span class="fbtn-text fbtn-text-left">Links</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+      <div class="fbtn-dropup">
+        <a class="fbtn waves-attach waves-circle" href="https://github.com/Daemonite/material" target="_blank"><span class="fbtn-text fbtn-text-left">Fork me on GitHub</span><span class="icon">code</span></a>
+        <a class="fbtn fbtn-brand waves-attach waves-circle waves-light" href="https://twitter.com/daemonites" target="_blank"><span class="fbtn-text fbtn-text-left">Follow Daemon on Twitter</span><span class="icon">share</span></a>
+        <a class="fbtn fbtn-green waves-attach waves-circle" href="http://www.daemon.com.au/" target="_blank"><span class="fbtn-text fbtn-text-left">Visit Daemon Website</span><span class="icon">link</span></a>
+      </div>
+    </div>
   </div>
-</div>
 
-
+  <!-- js -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/base.min.js"></script>
+  <script src="js/project.min.js"></script>
 </body>
 </html>
