@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
-  <title>MobilWe-Search</title>
+  <title>MovilWe-Search</title>
 
   <!-- css -->
   <link href="css/base.css" rel="stylesheet">
   <link href="css/project.css" rel="stylesheet">
-  
+  <!--hover effect-->
+  <link rel="stylesheet" type="text/css" href="css/eHover.css">
   <!-- favicon -->
   <!-- ... -->
 </head>
@@ -69,90 +70,158 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-lg-push-3 col-sm-10 col-sm-push-1">
-            <h1 class="content-heading"><img class="Wlogo"src="images/logos/We-Search.png"></h1> 
+            <h1 class="content-heading"></h1> 
           </div>
         </div>
       </div>
     </div>
+    
     <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-lg-push-3 col-sm-10 col-sm-push-1">
-          <section class="content-inner margin-top-no">
-          
-            <nav class="tab-nav tab-nav-orange ui-tab">
-              <ul class="nav nav-list">
-                <li class="active">
-                  <a class="waves-attach waves-light" data-toggle="tab" href="#suggested"><span class="text-white">SUGERIDOS</span></a>
-                </li>
-                <li>
-                  <a class="waves-attach waves-light" data-toggle="tab" href="#categories"><span class="text-white">CATEGORIAS</span></a>
-                </li>
-              </ul>
-            </nav>
+    <!--pestañas-->
+      <div class="card">
+              <div class="card-main">
+                <nav class="tab-nav tab-nav-red margin-top-no">
+                  <ul class="nav nav-justified">
+                    <li class="active">
+                      <a class="waves-attach" data-toggle="tab" href="#suggested">SUGERIDOS</a>
+                    </li>
+                    <li>
+                      <a class="waves-attach" data-toggle="tab" href="#categories">CATEGORIAS</a>
+                    </li>
+                  </ul>
+                </nav>
+                <div class="card-inner">
+                  <div class="tab-content">
+                    <div class="tab-pane fade active in" id="suggested">
 
-            <div class="ui-card-wrap">
-          <div class="row">
-            <div class="col-md-4 col-sm-6">
-              <div class="card card-green">
-                <div class="card-main">
-                  <div class="card-inner">
-                    <p class="card-heading">Establecimiento 1</p>
-                    <p>
-                      Lorem ipsum dolor sit amet.<br>
-                      Consectetur adipiscing elit.
-                    </p>
-                  </div>
-                  <div class="card-action">
-                    <div class="card-action-btn pull-left">
-                      <a class="btn btn-flat waves-attach" href="javascript:void(0)"><span class="icon">check</span>&nbsp;Button</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="card card-orange">
-                <div class="card-main">
-                  <div class="card-inner">
-                    <p class="card-heading">Establecimiento 2</p>
-                    <p>
-                      Lorem ipsum dolor sit amet.<br>
-                      Consectetur adipiscing elit.
-                    </p>
-                  </div>
-                  <div class="card-action">
-                    <div class="card-action-btn pull-left">
-                      <a class="btn btn-flat waves-attach" href="javascript:void(0)"><span class="icon">check</span>&nbsp;Button</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="card card-red">
-                <div class="card-main">
-                  <div class="card-inner">
-                    <p class="card-heading">Establecimiento 3</p>
-                    <p>
-                      Lorem ipsum dolor sit amet.<br>
-                      Consectetur adipiscing elit.
-                    </p>
-                  </div>
-                  <div class="card-action">
-                    <div class="card-action-btn pull-left">
-                      <a class="btn btn-flat waves-attach waves-light" href="javascript:void(0)"><span class="icon">check</span>&nbsp;Button</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                      <div class="pic">
+                        <a href="Presentacion1">
+                          <img src="images/Pruebas/Bancos.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title">Bancolombia</h1>
+                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
+                          </span></a>
+                      </div>
 
-          </section>
-        </div>
-      </div>
+                      <div class="pic">
+                        <a href="Presentacion1">
+                          <img src="images/Pruebas/Restaurantes.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title">E Mizal</h1>
+                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
+                          </span></a>
+                      </div>
+
+                      <div class="pic">
+                        <a href="Presentacion1">
+                          <img src="images/Pruebas/Tecnologia.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title">Tecnot</h1>
+                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
+                          </span></a>
+                      </div>
+
+                      <div class="pic">
+                        <a href="Presentacion1">
+                          <img src="images/Pruebas/Farmacias.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title">La Rebaja</h1>
+                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
+                          </span></a>
+                      </div>
+
+                   </div>
+                    <div class="tab-pane fade" id="categories">
+
+                      <div class="pic">
+                        <a href="Presentacion1">
+                          <img src="images/Pruebas/Bancos.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title">Bancos</h1>
+                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
+                          </span></a>
+                      </div>
+
+                      <div class="pic">
+                        <a href="Presentacion1">
+                          <img src="images/Pruebas/Farmacias.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title">Farmacias</h1>
+                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
+                          </span></a>
+                      </div>
+
+                      <div class="pic">
+                        <a href="Presentacion1">
+                          <img src="images/Pruebas/Deportes.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title">Deportes</h1>
+                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
+                          </span></a>
+                      </div>
+
+                      <div class="pic">
+                        <a href="Presentacion1">
+                          <img src="images/Pruebas/Tecnologia.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title">Tecnologia</h1>
+                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
+                          </span></a>
+                      </div>
+
+                      <div class="pic">
+                        <a href="Presentacion1">
+                          <img src="images/Pruebas/Servicios.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title">Servicios</h1>
+                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
+                          </span></a>
+                      </div>
+
+                      <div class="pic">
+                        <a href="Presentacion1">
+                          <img src="images/Pruebas/Restaurantes.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title">Restaurantes</h1>
+                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
+                          </span></a>
+                      </div>
+
+                      <div class="pic">
+                        <a href="Presentacion1">
+                          <img src="images/Pruebas/Bares.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title">Bares</h1>
+                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
+                          </span></a>
+                      </div>
+
+                      <div class="pic">
+                        <a href="Presentacion1">
+                          <img src="images/Pruebas/Alimentos.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title">Alimentos</h1>
+                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
+                          </span></a>
+                      </div>
+
+                      <div class="pic">
+                        <a href="Presentacion1">
+                          <img src="images/Pruebas/Centros Comerciales.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title">Centros Comerciales</h1>
+                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
+                          </span></a>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>      
     </div>
+
   </main>
   <footer class="ui-footer">
     <div class="container">

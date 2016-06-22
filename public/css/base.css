@@ -5558,8 +5558,8 @@ html.no-touchevents .tile-action-show {
   background-color: #f5f5f5;
   color: #212121;
   overflow: hidden;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  /*padding-top: 12px;
+  padding-bottom: 12px;*/
 }
 
 .content-header-brand,
@@ -5588,7 +5588,7 @@ html.no-touchevents .tile-action-show {
 
 .content-header-red,
 .page-red .content-header {
-  background-color: #f44336;
+  background-color: #BB0000;
   color: white;
 }
 
@@ -6199,3 +6199,4 @@ html.no-touchevents .tile-action-show {
 .Wlogo{
   width: 300px;
 }
+
