@@ -2044,10 +2044,10 @@ template,
 .padding-top-xs {
   padding-top: 8px !important;
 }
-
+/*
 .pull-left {
   float: left;
-}
+}*/
 
 .pull-right {
   float: right;
@@ -6200,3 +6200,6 @@ html.no-touchevents .tile-action-show {
   width: 300px;
 }
 
+.list-logo{
+  max-height: 400px;
+}

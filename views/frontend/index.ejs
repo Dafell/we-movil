@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+  <title>MobileWe-Search</title>
+
+  <!-- css -->
+  <link href="css/base.css" rel="stylesheet">
+  <link href="css/project.css" rel="stylesheet">
+  <!--hover effect-->
+  <link rel="stylesheet" type="text/css" href="css/eHover.css">
+  <!--carousel-->
+  <link rel="stylesheet" type="text/css" href="css/carousel.css">
+  <link rel="stylesheet" type="text/css" href="css/fonts/font-awesome/css/font-awesome.css">
+  
+  <!-- ... -->
+</head>
+<body class="page-red">
+  <header class="header header-transparent header-waterfall ui-header">
+    <ul class="nav nav-list pull-left">
+      <li>
+        <a data-toggle="menu" href="#ui_menu">
+          <span class="icon icon-lg">menu</span>
+        </a>
+      </li>
+    </ul>
+    <a class="header-logo margin-left-no" href="/">We-Search</a>
+    <ul class="nav nav-list pull-right">
+      <li class="dropdown margin-right">
+        <a class="dropdown-toggle padding-left-no padding-right-no" data-toggle="dropdown">
+          <span class="access-hide">John Smith</span>
+          <span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="../images/users/avatar-001.jpg"></span>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-right">
+          <li>
+            <a class="padding-right-lg waves-attach" href="javascript:void(0)"><span class="icon icon-lg margin-right">account_box</span>Profile Settings</a>
+          </li>
+          <li>
+            <a class="padding-right-lg waves-attach" href="javascript:void(0)"><span class="icon icon-lg margin-right">add_to_photos</span>Upload Photo</a>
+          </li>
+          <li>
+            <a class="padding-right-lg waves-attach" href="page-login.html"><span class="icon icon-lg margin-right">exit_to_app</span>Logout</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </header>
+  <nav aria-hidden="true" class="menu" id="ui_menu" tabindex="-1">
+    <div class="menu-scroll">
+      <div class="menu-content">
+        <a class="menu-logo" href="/">We-Search</a>
+        <ul class="nav">
+          <li>
+            <a class="collaosed waves-attach" data-toggle="collapse" href="#ui_menu_components">Calle</a>
+          </li>
+          <li>
+            <a class="collapsed waves-attach" data-toggle="collapse" href="#ui_menu_extras">Entretenimiento</a>
+          </li>
+          <li>
+            <a class="collapsed waves-attach" data-toggle="collapse" href="#ui_menu_javascript">Ocio</a>
+          </li>
+          <li>
+            <a class="collapsed waves-attach" data-toggle="collapse" href="#ui_menu_samples">Cultura</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main class="content">
+    <div class="content-header ui-content-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-lg-push-3 col-sm-10 col-sm-push-1">
+            <h1 class="content-heading"></h1> 
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+    
+        <div class="box-body">
+          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                
+            <div class="carousel-inner">
+                  
+                  <div class="item active">
+                    <img src="images/360/montañas.jpg" alt="First slide">
+                  </div>
+
+                  <div class="item ">
+                    <img src="images/360/montañas.jpg" alt="First slide">
+                  </div>
+
+                  <div class="item ">
+                    <img src="images/360/montañas.jpg" alt="First slide">
+                  </div>
+            </div>
+                
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+              <span class="fa fa-angle-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+              <span class="fa fa-angle-right"></span>
+            </a>
+          </div>
+        </div>
+    
+    <!--pestañas-->
+      <div class="card">
+              <div class="card-main">
+                <nav class="tab-nav tab-nav-red margin-top-no">
+                  <ul class="nav nav-justified">
+                    <li class="active">
+                      <a class="waves-attach" data-toggle="tab" href="#suggested">SUGERIDOS</a>
+                    </li>
+                    <li>
+                      <a class="waves-attach" data-toggle="tab" href="#categories">CATEGORIAS</a>
+                    </li>
+                  </ul>
+                </nav>
+                <div class="card-inner">
+                  <div class="tab-content">
+                    
+                    <div class="tab-pane fade active in" id="suggested">
+
+
+                      <div class="pic">
+                        <a href="Presentacion1">
+                          <img src="../images/category/<%= Establishment.idcategory%>/<%= Establishment._id%>/2.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title"><%= Establishment.name%></h1>
+                          </span></a>
+                      </div>
+<!--
+                      <div class="pic">
+                        <a href="Presentacion1">
+                          <img src="images/Pruebas/Restaurantes.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title">El Maizal</h1>
+                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
+                          </span></a>
+                      </div>
+
+                      <div class="pic">
+                        <a href="Presentacion1">
+                          <img src="images/Pruebas/Tecnologia.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title">Tecnot</h1>
+                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
+                          </span></a>
+                      </div>
+
+                      <div class="pic">
+                        <a href="Presentacion1">
+                          <img src="images/Pruebas/Farmacias.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title">La Rebaja</h1>
+                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
+                          </span></a>
+                      </div>
+-->
+                   </div>
+
+                    <div class="tab-pane fade" id="categories">
+
+                    <% Category.forEach(function(Category) { %>
+                      <div class="pic">
+                        <a href="establecimientos/<%= Category._id%>">
+                          <img src="images/category/<%= Category._id%>/imgcategory.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title"><%= Category.name%></h1>
+                          </span></a>
+                      </div>
+                    <% }) %>
+
+<!--
+                      <div class="pic">
+                        <a href="Presentacion1">
+                          <img src="images/Pruebas/Farmacias.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title">Farmacias</h1>
+                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
+                          </span></a>
+                      </div>
+
+                      <div class="pic">
+                        <a href="Presentacion1">
+                          <img src="images/Pruebas/Deportes.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title">Deportes</h1>
+                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
+                          </span></a>
+                      </div>
+
+                      <div class="pic">
+                        <a href="Presentacion1">
+                          <img src="images/Pruebas/Tecnologia.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title">Tecnologia</h1>
+                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
+                          </span></a>
+                      </div>
+
+                      <div class="pic">
+                        <a href="Presentacion1">
+                          <img src="images/Pruebas/Servicios.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title">Servicios</h1>
+                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
+                          </span></a>
+                      </div>
+
+                      <div class="pic">
+                        <a href="Presentacion1">
+                          <img src="images/Pruebas/Restaurantes.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title">Restaurantes</h1>
+                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
+                          </span></a>
+                      </div>
+
+                      <div class="pic">
+                        <a href="Presentacion1">
+                          <img src="images/Pruebas/Bares.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title">Bares</h1>
+                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
+                          </span></a>
+                      </div>
+
+                      <div class="pic">
+                        <a href="Presentacion1">
+                          <img src="images/Pruebas/Alimentos.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title">Alimentos</h1>
+                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
+                          </span></a>
+                      </div>
+
+                      <div class="pic">
+                        <a href="Presentacion1">
+                          <img src="images/Pruebas/Centros Comerciales.jpg" class="pic-image" alt="Pic"/>
+                          <span class="pic-caption bottom-to-top">
+                            <h1 class="pic-title">Centros Comerciales</h1>
+                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
+                          </span></a>
+                      </div>
+-->
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>      
+    </div>
+
+  </main>
+  <footer class="ui-footer">
+    <div class="container">
+      <strong>&copy; 2016 <a href="">We-nnova</a> - Todos los derechos reservados</strong>
+    </div>
+  </footer>
+  <div class="fbtn-container">
+    <div class="fbtn-inner">
+      <a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light" data-toggle="dropdown"><span class="fbtn-text fbtn-text-left">Links</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+      <div class="fbtn-dropup">
+        <a class="fbtn waves-attach waves-circle" href="https://github.com/Daemonite/material" target="_blank"><span class="fbtn-text fbtn-text-left">Fork me on GitHub</span><span class="icon">code</span></a>
+        <a class="fbtn fbtn-brand waves-attach waves-circle waves-light" href="https://twitter.com/daemonites" target="_blank"><span class="fbtn-text fbtn-text-left">Follow Daemon on Twitter</span><span class="icon">share</span></a>
+        <a class="fbtn fbtn-green waves-attach waves-circle" href="http://www.daemon.com.au/" target="_blank"><span class="fbtn-text fbtn-text-left">Visit Daemon Website</span><span class="icon">link</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- js -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/base.min.js"></script>
+  <script src="js/project.min.js"></script>
+  <!--carousel-->
+  <script src="js/carousel.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
