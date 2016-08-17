@@ -66,6 +66,46 @@ module.exports = function(app, passport) {
 
 	});
 
+	app.post('/calificarPositivo/:id', function(req, res) {
+		var id = req.param("id");
+    	Establishment.findById({ _id: id }, function(err, Establishment){
+      		if (err) throw err;
+      			var aux = parseInt(Establishment.score);
+      				aux = aux+1;
+      				Establishment.score = aux.toString();
+      			Establishment.save({ _id: id }, function(err)  {
+        			if (err) {
+          			res.end("{success: false}");
+          			
+        			}
+        		else {
+        			res.end("{success: true, aux: "+aux+"}");
+          			
+        		}
+    	  	});
+    	});
+    });
+
+    app.post('/calificarNegativo/:id', function(req, res) {
+		var id = req.param("id");
+    	Establishment.findById({ _id: id }, function(err, Establishment){
+      		if (err) throw err;
+      			var aux = parseInt(Establishment.score);
+      				aux = aux-1;
+      				Establishment.score = aux.toString();
+      			Establishment.save({ _id: id }, function(err)  {
+        			if (err) {
+          			res.end("{success: false}");
+          			
+        			}
+        		else {
+        			res.end("{success: true, aux: "+aux+"}");
+          			
+        		}
+    	  	});
+    	});
+    });
+
 	app.get('/establecimiento/:id',function(req, res){
 		var id = req.param("id");
 		Establishment.findOne({_id:id},function(err, Establishment){
@@ -90,5 +130,4 @@ module.exports = function(app, passport) {
 			});
 		});
 	});
-
 } 

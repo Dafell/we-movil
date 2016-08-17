@@ -140,7 +140,7 @@
 
 #smodal-window:target{
   opacity:1;
-  top:5%;
+  top:0.1%;
   visibility:visible
 }
 
