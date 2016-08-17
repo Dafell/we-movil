@@ -6211,6 +6211,12 @@ html.no-touchevents .tile-action-show {
   max-height: 400px;
 }
 
+@media (min-width: 500px) {
+  .list-logo {
+margin-top: 25px;     
+  }
+} 
+
 .titulo-establecimiento{
   font-family: 'Source Sans Pro','Anton','Fjalla One';
   text-align: center;
