@@ -1,6 +1,8 @@
 var Category = require('../models/category');
 var Establishment = require('../models/establishment')
 var Product = require('../models/product')
+var Photo = require('../models/photo');
+var Images = require('../models/Image')
 var console = require('console-prefix');
 var exec = require('exec');
 
@@ -8,24 +10,33 @@ module.exports = function(app, passport) {
 
 	app.get('/', function(req, res) {
 
-		 Category.find({},function(err, Category){
+		Category.find({},function(err, Category){
 			
 			if (err) {
 				res.send(err);
 			}
 			
-			Establishment.findOne({},function(err, Establishment){
-				if (err) {
-					res.send(err);
+		Establishment.findOne({},function(err, Establishment){
+		
+			if (err) {
+				res.send(err);
 				}
+
+		Images.find({},function(err, Images){
+			
+			if (err) {
+				res.send(err);
+			}
+
 
 				res.render("frontend/index.ejs",{
 				Category:Category,
-				Establishment:Establishment
+				Establishment:Establishment,
+				Images:Images
 				});
-			})
+			});
 		});
-
+		});
 	});
 	app.get('/cultura/', function(req, res) {
 
@@ -64,16 +75,20 @@ module.exports = function(app, passport) {
 			Product.find({idEstablishment:id},function(err, Product){
 				if (err) {
 					res.send(err);
-				}	
-				res.render("frontend/establishment.ejs",{
-					Establishment:Establishment,
-					Product:Product
-				});
+				}
+			Photo.find({idEstablishment:id},function(err, Photo){
+				if (err) {
+					res.send(err);
+				}
+
+			res.render("frontend/establishment",{
+				Establishment:Establishment,
+				Product:Product,
+				Photo:Photo
+			});
+			});
 			});
 		});
 	});
 
-
-
-
-}
+} 
