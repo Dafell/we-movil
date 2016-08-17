@@ -6,7 +6,6 @@ var exec = require('exec');
 
 module.exports = function(app, passport) {
 
-
 	app.get('/', function(req, res) {
 
 		 Category.find({},function(err, Category){
@@ -19,7 +18,6 @@ module.exports = function(app, passport) {
 				if (err) {
 					res.send(err);
 				}
-
 
 				res.render("frontend/index.ejs",{
 				Category:Category,
@@ -57,7 +55,7 @@ module.exports = function(app, passport) {
 
 	});
 
-	app.get('/:id',function(req, res){
+	app.get('/establecimiento/:id',function(req, res){
 		var id = req.param("id");
 		Establishment.findOne({_id:id},function(err, Establishment){
 			if (err) {
@@ -67,11 +65,10 @@ module.exports = function(app, passport) {
 				if (err) {
 					res.send(err);
 				}	
-			res.render("frontend/establecimiento",{
-				Establishment:Establishment,
-				Product:Product
-
-			});
+				res.render("frontend/establishment.ejs",{
+					Establishment:Establishment,
+					Product:Product
+				});
 			});
 		});
 	});

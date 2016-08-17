@@ -11,10 +11,12 @@
   <link href="../css/project.css" rel="stylesheet">
   <!--hover effect-->
   <link rel="stylesheet" type="text/css" href="../css/eHover.css">
-  <!--carousel-->
-  <link rel="stylesheet" type="text/css" href="../css/carousel.css">
-  <link rel="stylesheet" type="text/css" href="../css/fonts/font-awesome/css/font-awesome.css">
-  
+  <!--Circlar carousel-->
+
+  <link rel="stylesheet" type="text/css" href="../circularCarousel/css/style.css" >
+  <link rel="stylesheet" type="text/css" href="../circularCarousel/css/jquery.jscrollpane.css" media="all">
+
+ 
   <!-- ... -->
 </head>
 <body class="page-red">
@@ -27,7 +29,8 @@
       </li>
     </ul>
     <a class="header-logo margin-left-no" href="/">We-Search</a>
-    <ul class="nav nav-list pull-right">
+    
+    <!--<ul class="nav nav-list pull-right">
       <li class="dropdown margin-right">
         <a class="dropdown-toggle padding-left-no padding-right-no" data-toggle="dropdown">
           <span class="access-hide">John Smith</span>
@@ -39,7 +42,7 @@
           </li>
        </ul>
       </li>
-    </ul>
+    </ul>-->
   </header>
   <nav aria-hidden="true" class="menu" id="ui_menu" tabindex="-1">
     <div class="menu-scroll">
@@ -76,22 +79,63 @@
     <div class="container">
 
     <!--Cntenido de la vista-->
-    
-    <% Establishment.forEach(function(Establishment) { %>
+    <div class="ui-card-wrap">
+          <div class="row">
               <div class="card">
                 <aside class="card-side card-side-img pull-left">
-                  <img class="list-logo" alt="alt text" src="../images/category/<%= Establishment.idcategory%>/<%= Establishment._id%>/2.jpg">
+                  <img alt="alt text" src="../images/category/<%= Establishment.idcategory%>/<%= Establishment._id%>/2.jpg">
                 </aside>
                 <div class="card-main">
                   <div class="card-inner">
-                    <a href="/establecimiento/<%= Establishment._id%>"><p class="card-heading"><%= Establishment.name%></p></a>
+                    <p class="card-heading titulo-establecimiento"><%= Establishment.name%></p>
                     <p class="margin-bottom-lg">
+                      <%= Establishment.description %>
                     </p>
+                  </div>
+                  <div class="card-action">
+                    
                   </div>
                 </div>
               </div>
-            <% }) %>
+            
+          </div>
     </div>
+
+    <div class="ui-card-wrap">
+          <div class="row">
+          
+          <div id="ca-container" class="ca-container">
+            <div class="ca-wrapper">
+              
+            <% Product.forEach(function(Product) { %> 
+              <div class="ca-item">
+                <div class="ca-item-main">
+                  <div class="product">
+                    <img class="imag-product" src="../images/category/<%= Establishment.idcategory%>/<%= Establishment._id%>/<%= Product._id%>/1.jpg">
+                  </div>
+                    <a href="#" class="ca-more">leer mas...</a>
+                </div>
+                <div class="ca-content-wrapper">
+                  <div class="ca-content">
+                    <h6><%= Product.name%></h6>
+                    <a href="#" class="ca-close">close</a>
+                    <div class="ca-content-text">
+                      <p><%= Product.description%></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <% }) %>
+      <!--ca-wrapper close-->
+            </div>
+        </div>
+
+          </div>
+    </div>
+
+    
+
+  </div>
 
   </main>
   <footer class="ui-footer">
@@ -110,12 +154,21 @@
     </div>
   </div>
 
+ 
   <!-- js -->
   <script src="../js/jquery.min.js"></script>
   <script src="../js/base.min.js"></script>
   <script src="../js/project.min.js"></script>
-  <!--carousel-->
-  <script src="../js/carousel.js"></script>
-  <script src="../js/app.js"></script>
+
+  <!--circular Carousel-->
+  <script type="text/javascript" src="../circularCarousel/js/jquery.min.js"></script>
+  <script type="text/javascript" src="../circularCarousel/js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="../circularCarousel/js/jquery.mousewheel.js"></script>
+  <script type="text/javascript" src="../circularCarousel/js/jquery.contentcarousel.js"></script>
+
+  <script type="text/javascript">
+      $('#ca-container').contentcarousel();
+  </script>
+      
 </body>
 </html>

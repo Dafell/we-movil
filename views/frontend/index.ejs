@@ -27,23 +27,21 @@
       </li>
     </ul>
     <a class="header-logo margin-left-no" href="/">We-Search</a>
-    <ul class="nav nav-list pull-right">
+    
+    <!--Login-->
+    <!--<ul class="nav nav-list pull-right">
       <li class="dropdown margin-right">
         <a class="dropdown-toggle padding-left-no padding-right-no" data-toggle="dropdown">
           <span class="access-hide">John Smith</span>
           <span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="../images/users/avatar-001.jpg"></span>
         </a>
+        
         <ul class="dropdown-menu dropdown-menu-right">
           <li>
-            <a class="padding-right-lg waves-attach" href="javascript:void(0)"><span class="icon icon-lg margin-right">account_box</span>Profile Settings</a>
+            <a class="padding-right-lg waves-attach" href="javascript:void(0)"><span class="icon icon-lg margin-right">account_box</span>login</a>
           </li>
-          <li>
-            <a class="padding-right-lg waves-attach" href="javascript:void(0)"><span class="icon icon-lg margin-right">add_to_photos</span>Upload Photo</a>
-          </li>
-          <li>
-            <a class="padding-right-lg waves-attach" href="page-login.html"><span class="icon icon-lg margin-right">exit_to_app</span>Logout</a>
-          </li>
-        </ul>
+        </ul>-->
+
       </li>
     </ul>
   </header>
@@ -113,10 +111,10 @@
               <div class="card-main">
                 <nav class="tab-nav tab-nav-red margin-top-no">
                   <ul class="nav nav-justified">
-                    <li class="active">
+                    <!--<li class="active">
                       <a class="waves-attach" data-toggle="tab" href="#suggested">SUGERIDOS</a>
-                    </li>
-                    <li>
+                    </li>-->
+                    <li class="active">
                       <a class="waves-attach" data-toggle="tab" href="#categories">CATEGORIAS</a>
                     </li>
                   </ul>
@@ -124,9 +122,8 @@
                 <div class="card-inner">
                   <div class="tab-content">
                     
-                    <div class="tab-pane fade active in" id="suggested">
-
-
+                    <!--<div class="tab-pane fade active in" id="suggested">
+    
                       <div class="pic">
                         <a href="Presentacion1">
                           <img src="../images/category/<%= Establishment.idcategory%>/<%= Establishment._id%>/2.jpg" class="pic-image" alt="Pic"/>
@@ -134,37 +131,10 @@
                             <h1 class="pic-title"><%= Establishment.name%></h1>
                           </span></a>
                       </div>
-<!--
-                      <div class="pic">
-                        <a href="Presentacion1">
-                          <img src="images/Pruebas/Restaurantes.jpg" class="pic-image" alt="Pic"/>
-                          <span class="pic-caption bottom-to-top">
-                            <h1 class="pic-title">El Maizal</h1>
-                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
-                          </span></a>
-                      </div>
+                   </div>-->
 
-                      <div class="pic">
-                        <a href="Presentacion1">
-                          <img src="images/Pruebas/Tecnologia.jpg" class="pic-image" alt="Pic"/>
-                          <span class="pic-caption bottom-to-top">
-                            <h1 class="pic-title">Tecnot</h1>
-                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
-                          </span></a>
-                      </div>
 
-                      <div class="pic">
-                        <a href="Presentacion1">
-                          <img src="images/Pruebas/Farmacias.jpg" class="pic-image" alt="Pic"/>
-                          <span class="pic-caption bottom-to-top">
-                            <h1 class="pic-title">La Rebaja</h1>
-                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
-                          </span></a>
-                      </div>
--->
-                   </div>
-
-                    <div class="tab-pane fade" id="categories">
+                    <div class="tab-pane fade active in" id="categories">
 
                     <% Category.forEach(function(Category) { %>
                       <div class="pic">
@@ -175,80 +145,6 @@
                           </span></a>
                       </div>
                     <% }) %>
-
-<!--
-                      <div class="pic">
-                        <a href="Presentacion1">
-                          <img src="images/Pruebas/Farmacias.jpg" class="pic-image" alt="Pic"/>
-                          <span class="pic-caption bottom-to-top">
-                            <h1 class="pic-title">Farmacias</h1>
-                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
-                          </span></a>
-                      </div>
-
-                      <div class="pic">
-                        <a href="Presentacion1">
-                          <img src="images/Pruebas/Deportes.jpg" class="pic-image" alt="Pic"/>
-                          <span class="pic-caption bottom-to-top">
-                            <h1 class="pic-title">Deportes</h1>
-                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
-                          </span></a>
-                      </div>
-
-                      <div class="pic">
-                        <a href="Presentacion1">
-                          <img src="images/Pruebas/Tecnologia.jpg" class="pic-image" alt="Pic"/>
-                          <span class="pic-caption bottom-to-top">
-                            <h1 class="pic-title">Tecnologia</h1>
-                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
-                          </span></a>
-                      </div>
-
-                      <div class="pic">
-                        <a href="Presentacion1">
-                          <img src="images/Pruebas/Servicios.jpg" class="pic-image" alt="Pic"/>
-                          <span class="pic-caption bottom-to-top">
-                            <h1 class="pic-title">Servicios</h1>
-                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
-                          </span></a>
-                      </div>
-
-                      <div class="pic">
-                        <a href="Presentacion1">
-                          <img src="images/Pruebas/Restaurantes.jpg" class="pic-image" alt="Pic"/>
-                          <span class="pic-caption bottom-to-top">
-                            <h1 class="pic-title">Restaurantes</h1>
-                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
-                          </span></a>
-                      </div>
-
-                      <div class="pic">
-                        <a href="Presentacion1">
-                          <img src="images/Pruebas/Bares.jpg" class="pic-image" alt="Pic"/>
-                          <span class="pic-caption bottom-to-top">
-                            <h1 class="pic-title">Bares</h1>
-                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
-                          </span></a>
-                      </div>
-
-                      <div class="pic">
-                        <a href="Presentacion1">
-                          <img src="images/Pruebas/Alimentos.jpg" class="pic-image" alt="Pic"/>
-                          <span class="pic-caption bottom-to-top">
-                            <h1 class="pic-title">Alimentos</h1>
-                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
-                          </span></a>
-                      </div>
-
-                      <div class="pic">
-                        <a href="Presentacion1">
-                          <img src="images/Pruebas/Centros Comerciales.jpg" class="pic-image" alt="Pic"/>
-                          <span class="pic-caption bottom-to-top">
-                            <h1 class="pic-title">Centros Comerciales</h1>
-                              <p class="rank"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></p>
-                          </span></a>
-                      </div>
--->
 
                     </div>
                   </div>
@@ -267,9 +163,9 @@
     <div class="fbtn-inner">
       <a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light" data-toggle="dropdown"><span class="fbtn-text fbtn-text-left">Links</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
       <div class="fbtn-dropup">
-        <a class="fbtn waves-attach waves-circle" href="https://github.com/Daemonite/material" target="_blank"><span class="fbtn-text fbtn-text-left">Fork me on GitHub</span><span class="icon">code</span></a>
-        <a class="fbtn fbtn-brand waves-attach waves-circle waves-light" href="https://twitter.com/daemonites" target="_blank"><span class="fbtn-text fbtn-text-left">Follow Daemon on Twitter</span><span class="icon">share</span></a>
-        <a class="fbtn fbtn-green waves-attach waves-circle" href="http://www.daemon.com.au/" target="_blank"><span class="fbtn-text fbtn-text-left">Visit Daemon Website</span><span class="icon">link</span></a>
+        <a class="fbtn waves-attach waves-circle" href="#" target="_blank"><span class="fbtn-text fbtn-text-left">Fork me on GitHub</span><span class="icon">code</span></a>
+        <a class="fbtn fbtn-brand waves-attach waves-circle waves-light" href="#" target="_blank"><span class="fbtn-text fbtn-text-left">Follow Daemon on Twitter</span><span class="icon">share</span></a>
+        <a class="fbtn fbtn-green waves-attach waves-circle" href="#" target="_blank"><span class="fbtn-text fbtn-text-left">Visit Daemon Website</span><span class="icon">link</span></a>
       </div>
     </div>
   </div>

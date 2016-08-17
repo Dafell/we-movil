@@ -6203,3 +6203,77 @@ html.no-touchevents .tile-action-show {
 .list-logo{
   max-height: 400px;
 }
+
+.titulo-establecimiento{
+  font-family: 'Source Sans Pro','Anton','Fjalla One';
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px;
+  margin:0;
+}
+
+.desc-est{
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  text-align: justify;
+  color: #333;
+  padding: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+
+}
+
+/*Social Buttons*/
+
+.sbtn {
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid transparent;
+}
+
+.sbtn-social-icon {
+  position: relative;
+  padding-left: 44px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 34px;
+  width: 34px;
+  padding: 0;
+}
+
+.sbtn-facebook {
+  color: #ffffff;
+  background-color: #3b5998;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.sbtn-facebook:focus,
+.sbtn-facebook.focus {
+  color: #ffffff;
+  background-color: #2d4373;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.sbtn-facebook:hover {
+  color: #ffffff;
+  background-color: #2d4373;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.sbtn-facebook:active,
+.sbtn-facebook.active,
+.open > .dropdown-toggle.sbtn-facebook {
+  color: #ffffff;
+  background-color: #2d4373;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.sbtn-facebook:active,
+.sbtn-facebook.active,
+.open > .dropdown-toggle.sbtn-facebook {
+  background-image: none;
+}
+.sbtn-facebook .badge {
+  color: #3b5998;
+  background-color: #ffffff;
+}
