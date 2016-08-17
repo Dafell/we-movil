@@ -2850,8 +2850,8 @@ html.no-touchevents .fbtn:hover > .fbtn-text {
   display: block;
   font-size: 30px;
   line-height: 28px;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  /*margin-top: 24px;
+  margin-bottom: 24px;*/
   
 }
 
@@ -6337,7 +6337,7 @@ html.no-touchevents .tile-action-show {
 #rank{  
   display: flex;
   flex-direction:row;
-  justify-content:center;
+  /*justify-content:center;*/
 }
 /*Forma*/
 #burst-8 {
