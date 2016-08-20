@@ -38,7 +38,7 @@ module.exports = function(app, passport) {
 		});
 		});
 	});
-	app.get('/cultura/', function(req, res) {
+	app.get('/cultura', function(req, res) {
 
 		 res.render("frontend/cultura.ejs");
 	
@@ -46,7 +46,7 @@ module.exports = function(app, passport) {
 	
 	app.get('/ocio/', function(req, res) {
 
-		res.render("frontend/ocio.ejs")
+		res.render("frontend/ocio.ejs");
 	});
 		
 	app.get('/rutas', function(req, res) {
