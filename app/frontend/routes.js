@@ -43,12 +43,24 @@ module.exports = function(app, passport) {
 		 res.render("frontend/cultura.ejs");
 	
 	});
+	
 	app.get('/ocio/', function(req, res) {
 
 		res.render("frontend/ocio.ejs")
 	});
 		
+	app.get('/rutas', function(req, res) {
 
+        Establishment.find({},function(err, Establishment) {
+	      if (err) {
+	        return res.send(err);
+	      }
+
+	      res.render('frontend/mapRoutes.ejs',{
+	        Establishment:Establishment,
+	      });
+	    });
+	});	
 	
 
 	app.get('/establecimientos/:id',function(req, res){
