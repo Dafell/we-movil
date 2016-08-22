@@ -2678,9 +2678,9 @@ template,
 }
 
 .fbtn-text {
-  background-color: rgba(0, 0, 0, 0.87);
+  /*background-color: rgba(0, 0, 0, 0.87);*/
   border-radius: 2px;
-  color: #ffffff;
+  color: #bb0000;
   display: none;
   font-size: 12px;
   line-height: 20px;
@@ -2730,6 +2730,7 @@ html.no-touchevents .fbtn:hover > .fbtn-text {
   display: flex;
   margin-top: 24px;
   margin-bottom: 24px;
+  padding: 5px;
 }
 .card[href]:focus, .card[href]:hover {
   outline: 0;
@@ -6039,7 +6040,7 @@ html.no-touchevents .tile-action-show {
   transition: -webkit-transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  width: 320px;
+  width: 200px;
   z-index: 1;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
@@ -6210,12 +6211,12 @@ html.no-touchevents .tile-action-show {
 .list-logo{
   max-height: 400px;
 }
-
-@media (min-width: 500px) {
+/*
+@media (min-width: 500px) {  /*Redimensionamiento ps
   .list-logo {
 margin-top: 25px;     
   }
-} 
+} */
 
 .titulo-establecimiento{
   font-family: 'Source Sans Pro','Anton','Fjalla One';
@@ -6379,3 +6380,91 @@ margin-top: 25px;
 
 /*fin forma*/
 
+/*Planes*/
+.pricing-best{
+  background-color: #fff;
+  border:2px solid #bb0000;
+}
+
+.card-block{
+  padding: 1.25rem;
+}
+
+.card-title{
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.card-text{
+  font-weight: 300;
+  text-align: center;
+}
+
+.pricing-box-currency{
+  top: -1.5rem;
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing:.75rem;
+}
+
+.pricing-box-price{
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.tittle-box-price{
+  font-size: 3rem;
+  font-weight: 590;
+  color:#004c75;
+}
+
+.pricing-box h4 small{
+  font-size: .8125rem;
+  font-weight: 600;
+  line-height: 1.1538;
+  color: #aeb0b5;
+}
+
+.list-group{
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.list-group-flush{
+
+}
+
+.list-group-item{
+  position: relative;
+  display: block;
+  padding: .75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border:1px solid #ddd;
+}
+
+.card-pricing {
+  background-color: #ffffff;
+  border-radius: 2px;
+  box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 5px;
+}
+
+.box-header {
+  color: #444;
+  display: block;
+  font-size: 3rem;
+  text-align: center;
+  
+}
+
+.box-header.with-border {
+  border-bottom: 1px solid #f4f4f4;
+}

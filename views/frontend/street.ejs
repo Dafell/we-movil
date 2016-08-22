@@ -21,6 +21,8 @@
   <!--Fonts-->
   <link rel="stylesheet" type="text/css" href="../Fonts/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="../Fonts/ionicons/css/ionicons.css">
+  <!--Photo Sphere-->
+  <link href="Photo-Sphere/example1.css" rel="stylesheet" type="text/css"/>
  
   <!-- ... -->
 </head>
@@ -33,7 +35,7 @@
         </a>
       </li>
     </ul>
-    <a class="header-logo margin-left-no" href="/">We-Search</a>
+    <a class="header-logo margin-left-no" href="/"><img class="logotipo" src="images/logos/We-Search.png"></a>
     
     <!--<ul class="nav nav-list pull-right">
       <li class="dropdown margin-right">
@@ -52,19 +54,16 @@
   <nav aria-hidden="true" class="menu" id="ui_menu" tabindex="-1">
     <div class="menu-scroll">
       <div class="menu-content">
-        <a class="menu-logo" href="/">We-Search</a>
+        <a class="menu-logo" href="/"><img class="logotipo" src="images/logos/We-Search-color.png"></a>
         <ul class="nav">
           <li>
-            <a class="collaosed waves-attach" data-toggle="collapse" href="#ui_menu_components">Calle</a>
+            <a class="collaosed waves-attach" href="calle">Calle</a>
           </li>
           <li>
-            <a class="collapsed waves-attach" data-toggle="collapse" href="#ui_menu_extras">Entretenimiento</a>
+            <a class="collapsed waves-attach" href="ocio">Ocio</a>
           </li>
           <li>
-            <a class="collapsed waves-attach" data-toggle="collapse" href="#ui_menu_javascript">Ocio</a>
-          </li>
-          <li>
-            <a class="collapsed waves-attach" data-toggle="collapse" href="#ui_menu_samples">Cultura</a>
+            <a class="collapsed waves-attach" href="cultura">Cultura</a>
           </li>
         </ul>
       </div>
@@ -84,13 +83,13 @@
     <div class="container">
 
     <!--Cntenido de la vista-->
-        
+    <% Images.forEach(function(Images) { %>    
     <div class="ui-card-wrap">
           <div class="row">
             <section>
               <div class="box box-danger">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Nombreeee</h3>
+                  <h3 class="box-title"><%= Images.name%></h3>
                     <div class="box-tools pull-right">
                       <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                       </button>
@@ -100,7 +99,7 @@
                 <!-- /.box-header -->
                 <div class="box-body">
                   <a href="#modal-window">
-                  <img src="images/360/montañas.jpg">
+                  <img src="images/360/Gallery/street/<%= Images._id%>/1.jpg" id="image">
                   </a>
                 </div>
                 <!-- /.box-body -->
@@ -109,6 +108,7 @@
           </section> 
       </div>
     </div>
+    <% }) %>
   </div>
 
   </main>
@@ -139,19 +139,28 @@
           <div class="description">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos necessitatibus provident expedita vel sit corrupti cumque officia explicabo voluptatibus rerum doloremque voluptatem error tenetur maxime nihil, velit obcaecati possimus dolorum!</p>  
           </div>
+
           <div class="picture">
             <div id="content">
               <div id="container"></div>
                 <p style="text-align: center;">
-                  <a href="#" id="go"><img class="loading360" src="./images/Logos/3601.png"></a>
+                <a href="" id="go"><img class="loading360" src="images/logos/3601.png"><img id="Back-image" class="Back-image"src=""></a>
+                
+                <!--<a href="" id="go"></a>-->
                 </p>
-
             </div>
           </div>
+          
         </div>
       </div>
       <div class="overlay"></div>
   </div>
+
+  <!--Photo Sphere-->
+  <script type="text/javascript" src="Photo-Sphere/js/example1.js"></script>
+  <script type="text/javascript" src="Photo-Sphere/js/photo-sphere-viewer.js"></script>
+  <script type="text/javascript" src="Photo-Sphere/js/photo-sphere-viewer.min.js"></script>
+  <script type="text/javascript" src="Photo-Sphere/js/three.min.js"></script>
  
   <!-- js -->
   <script src="../js/jquery.min.js"></script>
@@ -169,6 +178,19 @@
   <script type="text/javascript">
       $('#ca-container').contentcarousel();
   </script>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $("#go").click(function(){
+      $("#go").fadeOut("slow");
+    });
+  });
+</script>
+
+<script type="text/javascript">
+  var imagen=document.getElementById('image').src ;
+   document.getElementById('Back-image').src=imagen;
+</script>
 
     <script type="text/javascript">
   var nc = jQuery.noConflict();
