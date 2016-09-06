@@ -54,6 +54,11 @@ module.exports = function(app, passport) {
 		});
 	});
 
+	app.get('/galeria/', function(req, res) {
+
+		res.render("frontend/gallery.ejs");
+	});
+
 	app.get('/ocio/', function(req, res) {
 
 		res.render("frontend/ocio.ejs");
