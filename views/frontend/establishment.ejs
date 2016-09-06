@@ -66,9 +66,9 @@
           <li>
             <a class="collaosed waves-attach" href="../calle">Calle</a>
           </li>
-          <li>
+          <!--<li>
             <a class="collapsed waves-attach" href="../ocio">Ocio</a>
-          </li>
+          </li>-->
           <li>
             <a class="collapsed waves-attach" href="../cultura">Cultura</a>
           </li>
@@ -230,20 +230,20 @@
    <div id="modal-window">
       <div class="modal-window-content">
         <div class="modal-header">
-          <h4>Titulo de la imagen</h4>
+          <h4><%= Establishment.name%></h4>
           <a href="#" id="closed"><i class="fa fa-close"></i></a>
         </div>
         
         <div class="copy">
           <div class="description">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos necessitatibus provident expedita vel sit corrupti cumque officia explicabo voluptatibus rerum doloremque voluptatem error tenetur maxime nihil, velit obcaecati possimus dolorum!</p>  
+          <p><%= Establishment.description%></p>  
           </div>
 
           <div class="picture">
             <div id="content">
               <div id="container"></div>
                 <p style="text-align: center;">
-                <a href="" id="go"><img class="loading360" src="images/logos/3601.png"><img id="Back-image" class="Back-image"src=""></a>
+                <a href="" id="go"><img id="Back-image" class="Back-image"src=""></a>
                 
                 <!--<a href="" id="go"></a>--> 
                 </p>

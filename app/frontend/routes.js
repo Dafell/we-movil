@@ -42,7 +42,7 @@ module.exports = function(app, passport) {
 
 	app.get('/cultura', function(req, res) {
 
-		Images.find({},function(err, Images){
+		Images.findOne({},function(err, Images){
 			
 			if (err) {
 				res.send(err);
@@ -66,7 +66,7 @@ module.exports = function(app, passport) {
 
 	app.get('/calle/', function(req, res) {
 
-		Images.find({},function(err, Images){
+		Images.findOne({},function(err, Images){
 			
 			if (err) {
 				res.send(err);
