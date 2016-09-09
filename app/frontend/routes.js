@@ -38,16 +38,51 @@ module.exports = function(app, passport) {
 		});
 		});
 	});
+	
+
 	app.get('/cultura', function(req, res) {
 
-		 res.render("frontend/cultura.ejs");
-	
+		Images.findOne({},function(err, Images){
+			
+			if (err) {
+				res.send(err);
+			}
+
+			res.render("frontend/culture.ejs",{
+				Images:Images
+			});
+		});
 	});
-	
+
+	app.get('/galeria/', function(req, res) {
+
+		res.render("frontend/gallery.ejs");
+	});
+
 	app.get('/ocio/', function(req, res) {
 
 		res.render("frontend/ocio.ejs");
 	});
+
+	app.get('/planes/', function(req, res) {
+
+		res.render("frontend/plans.ejs");
+	});
+
+	app.get('/calle/', function(req, res) {
+
+		Images.findOne({},function(err, Images){
+			
+			if (err) {
+				res.send(err);
+			}
+
+			res.render("frontend/street.ejs",{
+				Images:Images
+			});
+		});
+	});
+		
 		
 	app.get('/rutas', function(req, res) {
 

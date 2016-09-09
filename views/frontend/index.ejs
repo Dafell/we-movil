@@ -14,6 +14,8 @@
   <!--carousel-->
   <link rel="stylesheet" type="text/css" href="css/carousel.css">
   <link rel="stylesheet" type="text/css" href="css/fonts/font-awesome/css/font-awesome.css">
+  <!--Photo Sphere-->
+  <link href="Photo-Sphere/example1.css" rel="stylesheet" type="text/css"/>
   
   <!-- ... -->
 </head>
@@ -26,7 +28,7 @@
         </a>
       </li>
     </ul>
-    <a class="header-logo margin-left-no" href="/">We-Search</a>
+    <a class="header-logo margin-left-no" href="/"><img class="logotipo" src="images/logos/We-Search.png"></a>
     
     <!--Login-->
     <!--<ul class="nav nav-list pull-right">
@@ -48,14 +50,17 @@
   <nav aria-hidden="true" class="menu" id="ui_menu" tabindex="-1">
     <div class="menu-scroll">
       <div class="menu-content">
-        <a class="menu-logo" href="/">We-Search</a>
+        <a class="menu-logo" href="/"><img class="logotipo" src="images/logos/We-Search-color.png"></a>
         <ul class="nav">
           <li>
-            <a class="collaosed waves-attach" href="#ui_menu_components">Calle</a>
+            <a id="wesearch" class="collaosed waves-attach" href="planes">¿Qué es We-Search?</a>
           </li>
           <li>
-            <a class="collapsed waves-attach" href="#ui_menu_javascript">Ocio</a>
+            <a class="collaosed waves-attach" href="calle">Calle</a>
           </li>
+          <!--<li>
+            <a class="collapsed waves-attach" href="ocio">Ocio</a>
+          </li>-->
           <li>
             <a class="collapsed waves-attach" href="cultura">Cultura</a>
           </li>
@@ -76,29 +81,38 @@
         </div>
       </div>
     </div>
-    
+
     <div class="container">
-    
-        <div class="box-body">
+      
+      <div class="box-body ">
           <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                 
             <div class="carousel-inner">
                   
+                  <h2 class="content-sub-heading"> Imagen 360 de la semana </h2>  
+                  
                   <div class="item active">
+                    <a href="/galeria"><img src="images/360/montañas.jpg" alt="First slide" id="image"></a>
+                  </div>
+                <!--
+                  <div class="item">
                     <img src="images/360/montañas.jpg" alt="First slide">
                   </div>
-                  
+
+                  <div class="item">
+                    <img src="images/360/montañas.jpg" alt="First slide">
+                  </div>
+                -->  
             </div>
-                
+            <!--    
             <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
               <span class="fa fa-angle-left"></span>
             </a>
             <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
               <span class="fa fa-angle-right"></span>
-            </a>
+            </a>-->
           </div>
-        </div>
-    
+      </div>
     <!--pestañas-->
       <div class="card">
               <div class="card-main">
@@ -143,7 +157,7 @@
                   </div>
                 </div>
               </div>
-            </div>      
+      </div>      
     </div>
 
   </main>
@@ -154,11 +168,10 @@
   </footer>
   <div class="fbtn-container">
     <div class="fbtn-inner">
-      <a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light" data-toggle="dropdown"><span class="fbtn-text fbtn-text-left">Links</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+      <a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light" data-toggle="dropdown"><span class="fbtn-text fbtn-text-left"></span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
       <div class="fbtn-dropup">
-        <a class="fbtn waves-attach waves-circle" href="#" target="_blank"><span class="fbtn-text fbtn-text-left">Fork me on GitHub</span><span class="icon">code</span></a>
-        <a class="fbtn fbtn-brand waves-attach waves-circle waves-light" href="#" target="_blank"><span class="fbtn-text fbtn-text-left">Follow Daemon on Twitter</span><span class="icon">share</span></a>
-        <a class="fbtn fbtn-green waves-attach waves-circle" href="#" target="_blank"><span class="fbtn-text fbtn-text-left">Visit Daemon Website</span><span class="icon">link</span></a>
+
+        <a class="fbtn fbtn-red waves-attach waves-circle" href="/"><span class="fbtn-text fbtn-text-left">inicio</span><span class="icon">link</span></a>
       </div>
     </div>
   </div>

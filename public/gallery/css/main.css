@@ -1,0 +1,262 @@
+.clearfix:before,  
+.clearfix:after {  
+    content: " ";  
+    display: table;  
+}  
+.clearfix:after {  
+    clear: both;  
+}  
+ 
+.clearfix {  
+    *zoom: 1;  
+}
+
+/*  Header  */
+@media (min-width:1099px){
+    .descripcion{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 22%;
+        min-height: 100%;
+        padding: 0 0 0 10px;
+        background: #ffffff; 
+        float: left;
+        overflow: hidden;
+        z-index: -1;
+    }
+
+    .descripcion .logo{
+        margin-top: 30%;
+    }
+
+    .descripcion nav ul{
+        display: block;
+        overflow: hidden;
+        margin-top: 100px;
+        list-style: none;
+    }
+
+    .descripcion nav ul li{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    .descripcion nav ul li a{
+        color: #454545;
+        font-family: "raleway-regular", arial;
+        font-size: 14px;
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+
+    .descripcion nav ul li a:hover,
+    .descripcion nav ul li a.selected{
+        color: #969595;
+    }
+    
+    .descripcion .rights p{
+        color: #454545;
+        font-family: "raleway-regular", arial;
+        font-size: 11px;
+        letter-spacing: 1px;
+        line-height: 18px;
+    }
+
+    .descripcion .rights a{
+        font-family: "raleway-bold", arial;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    #menu_icon,
+    .close_menu{
+        display: none;
+    }
+
+}
+
+#menu_icon,
+.close_menu{
+    float: right;
+    margin-right: 40px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: url('../img/men_icons.png') no-repeat;
+}
+
+#menu_icon{    
+    background-position: 0 0;
+}
+.close_menu{
+    background-position: -41px 0!important;
+}
+
+
+/*  Main  */
+.main{
+    width: 100%;
+    height: 100%;
+    padding-left: 22%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    z-index: -20;
+    background: #fff;
+    clear: both;
+}
+
+
+
+
+
+/*  Home/portfolio  */
+.main .work{
+    display: block;
+    width: 32.5%;
+    height: auto;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    margin:2.5px;
+}
+
+.main .work .media{
+    width: 100%;
+    vertical-align: middle;
+}
+
+.main .work .caption{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0; 
+    left: 0;
+    background: #ffffff;
+    opacity: 0;
+}
+
+
+.main .work a:hover .caption{
+    opacity: 1;
+}
+
+
+.work .caption .work_title{
+    display: block;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    margin-top: -40px;
+}
+
+.main .work .caption h1{
+    position: relative;
+    display: inline-block;
+    max-width: 90%;
+    padding: 20px 0;
+    
+    color: #454545;
+    font-family: "raleway-regular", arial;
+    font-size: 16px;
+    letter-spacing: .5px;
+    border-bottom: 1px solid #bfbbbb;
+    border-top: 1px solid #bfbbbb;
+}
+
+
+
+/*  Responsive code  */
+@media (max-width:1099px){
+
+    .descripcion{
+        display: block;
+        width: 100%;
+        min-height: 100px;
+        padding: 0;
+        position: relative;
+    }
+    .descripcion .logo{
+        margin: 40px 0 0 30px;
+        float: left;
+    }
+    .descripcion .footer{
+        display: none;
+    }
+    .descripcion #menu_icon,
+    .descripcion .close_menu{
+        float: right;
+        margin: 30px 30px 0 0;
+    }
+    
+    .descripcion nav{
+        width: 100%;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        z-index: 1;
+    }
+
+    .descripcion nav ul{
+        list-style: none;
+        display: none;
+        position: relative;
+    }
+    .descripcion nav ul li a{
+        display: block;
+        width: 100%;
+        padding: 30px 0;
+        text-align: center;
+        color: #454545;
+        font-family: "raleway-regular", arial;
+        font-size: 14px;
+        text-decoration: none;
+        border-top: 1px solid #f7f5f5;
+        background: #fff;
+    }
+    .descripcion nav ul li a:active{
+        background: #f7f5f5;
+    }
+    #menu_icon,
+    .close_menu,
+    .show_menu{
+        display: block;
+    }
+    .show_menu{
+        display: block;
+    }
+
+    .main .work{
+        width: 24%;
+    }
+    .main{
+        width: 100%;
+        position: relative;
+        padding-left: 0;
+    }
+    #map{
+        margin: 0!important;
+    }
+}
+
+@media (max-width:550px){
+     .main .work{
+        width: 48.5%;
+    }
+}
+
+.justified{
+    margin-right: 10px;
+    text-align: justify;
+}
+
+.placeTittle{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+
+}
