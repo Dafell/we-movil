@@ -21,7 +21,10 @@
   <!--Fonts-->
   <link rel="stylesheet" type="text/css" href="../Fonts/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="../Fonts/ionicons/css/ionicons.css">
- 
+  
+  <!-- Google maps CSS -->
+  <link rel="stylesheet" href="css/gmaps.css" type="text/css">
+  
   <!-- ... -->
 </head>
 <body class="page-red">
@@ -193,12 +196,15 @@
     
     <!-- Ruta en el mapa -->
     <section id="routeMap">
-      <h3>Como llegar a <b><%= Establishment.name %></b></h3>
-      <b>Modo de desplazamiento: </b>
-      <select id="mode">
-        <option value="WALKING">Caminando</option>
-        <option value="DRIVING">Conduciendo</option>
-      </select>
+
+      <div style="margin: 10px; text-align: center;">
+        <h3>Como llegar a <b><%= Establishment.name %></b></h3>
+        <b>Modo de desplazamiento: </b>
+        <select id="mode" style="border-radius: 5px; padding: 5px; background-color: white;">
+          <option value="WALKING">Caminando</option>
+          <option value="DRIVING">Conduciendo</option>
+        </select>
+      </div>
 
       <div id="map" style="height:500px; width:100%;"></div>
     </section>

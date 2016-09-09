@@ -27,3 +27,10 @@ html, body {
   height:0.01%;
   text-align: center;
 }
+
+#end, #mode {
+  border-radius: 5px;
+  padding: 5px;
+  /*color: white;*/
+  background-color: white;
+}
