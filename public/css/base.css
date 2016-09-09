@@ -5632,7 +5632,9 @@ html.no-touchevents .tile-action-show {
 }
 
 .page-red .content-sub-heading {
-  color: #f44336;
+  color: #164369;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .header {

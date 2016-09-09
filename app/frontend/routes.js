@@ -1,8 +1,9 @@
 var Category = require('../models/category');
-var Establishment = require('../models/establishment')
-var Product = require('../models/product')
+var Establishment = require('../models/establishment');
+var Product = require('../models/product');
 var Photo = require('../models/photo');
-var Images = require('../models/Image')
+var Images = require('../models/Image');
+var Places = require('../models/place');
 var console = require('console-prefix');
 var exec = require('exec');
 
@@ -22,7 +23,7 @@ module.exports = function(app, passport) {
 				res.send(err);
 				}
 
-		Images.find({},function(err, Images){
+		Images.findOne({},function(err, Images){
 			
 			if (err) {
 				res.send(err);
@@ -54,9 +55,17 @@ module.exports = function(app, passport) {
 		});
 	});
 
-	app.get('/galeria/', function(req, res) {
+	app.get('/galeria/',function(req, res) {
 
-		res.render("frontend/gallery.ejs");
+		Places.findOne({},function(err, Places){
+			
+			if (err) {
+				res.send(err);
+			}
+			res.render("frontend/gallery.ejs",{
+				Places:Places
+			});
+		});
 	});
 
 	app.get('/ocio/', function(req, res) {
